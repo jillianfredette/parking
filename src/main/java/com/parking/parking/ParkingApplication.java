@@ -32,6 +32,10 @@ public class ParkingApplication {
 					String[] lot = curr.split(" ");
 
 					//create parking lot
+					if(parkingLots.containsKey(lot[0])){
+						System.out.println("Lot "+lot[0]+" already exists");
+						throw new Exception();
+					}
 					parkingLots.put(lot[0], new ParkingLot(lot[0], Integer.parseInt(lot[1]), Integer.parseInt(lot[2])));
 
 					//add entrance gates
@@ -53,6 +57,10 @@ public class ParkingApplication {
 			if ((curr = reader.readLine()).equals("Cars")) {
 				while((curr = reader.readLine()).length() > 0){
 					//add car
+					if(cars.containsKey(Integer.parseInt(curr))){
+						System.out.println("Car "+curr+" already exists");
+						throw new Exception();
+					}
 					cars.put(Integer.parseInt(curr), new Car(Integer.parseInt(curr)));
 				}
 				System.out.println("\n");
