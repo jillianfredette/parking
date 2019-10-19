@@ -59,8 +59,8 @@ Cars
 12345  
 67891 
 
-Actions
-12345 Enter A 1
+Actions  
+12345 Enter A 1  
 12345 Exit A 2
 
 //Here there is a lot A with 1 spot, 50 cents to park, 1 entrance gate, and 2 exit gates
@@ -69,7 +69,7 @@ Actions
 //Car 12345 enters lot A through gate 1 and then exits lot A through gate 2
 
 ## Output
-At any point if there the input file is incorrectly formatted, the program will notify you and then end.  
+At any point if the input file is incorrectly formatted, the program will notify you and then end.  
 The program will output information about each lot created, each gate created, and each car created.    
 After all lots, gates, and cars have been created, the program will output the actions occurring. 
 If there is an issue with the input that does not have to do with formatting (i.e. a car tries to enter a lot through 
@@ -81,18 +81,37 @@ Once the program reaches the end of the actions, it will output the total profit
 There are 5 sample inputs. Each one showcases different aspects of the program.
 
 ### Sample Input 1
+This sample shows a program which doesn't encounter any issues when running. This sample 
+showcases the programs ability to handle multiple cars, multiple lots, and cars 
+entering and exiting one lot and then subsequently entering and exiting another 
+with a new ticket.
 
 
 ### Sample Input 2
+This sample shows the case where a car is attempting to enter through an exit gate. 
+In the first action, car 1 is attempting to enter lot A through gate 2 (which is an exit gate). 
+The program notifies you via output that the input is invalid and does not allow 
+car 1 to enter lot A. The program then continues to run with car 1 entering lot 
+A through gate 1 which is an entrance.
 
 
 ### Sample Input 3
+This sample shows the case where a car is attempting to enter a lot that is already at max capacity. 
+This occurs in the 2nd action when are 2 tries to enter lot A even though A only has a capacity 
+of 1 and already has 1 car in it. The program does not allow car 2 to enter and notifies via 
+output. Once car 1 leaves the lot, car 2 is then able to enter the lot.
 
 
 ### Sample Input 4
+This sample shows the case where an illegal action occurs, in the 3rd action, car 1 is attempting to 
+enter lot B even though it is already in lot A. The program notifies via output that 
+car 1 is already in a lot and can't enter another lot, and then continues to run.
 
 
 ### Sample Input 5
+This sample shows the case where the input file is not formatted correctly 
+and causes the program to terminate. The issue lies in the fact that first car that is attempting to perform an action 
+does not exist (there is no car with the licence number 3).
 
 
 ## Compiling and Running the Program

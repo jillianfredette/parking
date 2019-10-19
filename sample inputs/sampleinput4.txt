@@ -1,0 +1,14 @@
+Parking Lots
+A 100 50 1 1
+B 100 10 1 1
+
+Cars
+1
+2
+
+Actions
+1 Enter A 1
+2 Enter A 1
+1 Enter B 1
+1 Exit A 2
+2 Exit A 2

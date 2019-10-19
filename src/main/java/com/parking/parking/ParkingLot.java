@@ -5,11 +5,11 @@ import java.util.HashSet;
 
 public class ParkingLot {
     //max capacity
-    int capacity;
+    final int capacity;
     //current occupancy
     int occupancy;
     //price of the lot
-    int price;
+    final int price;
     //current profits
     int profit;
     String name;
