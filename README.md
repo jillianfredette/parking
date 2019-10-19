@@ -115,5 +115,16 @@ does not exist (there is no car with the licence number 3).
 
 
 ## Compiling and Running the Program
+This program is a maven project which creates a jar executable, to compile it in command line, first navigate to the project folder, then enter  
 
+*mvn clean package*
 
+Next, navigate into the newly created target folder
+
+*cd target*
+
+Next you will run the executable jar with the path and name of the input file as an input argument
+
+*java -jar parking-0.0.1-SNAPSHOT.jar "C:\...\sampleinput1.txt"*  
+
+//Here, you need to replace *"C:\...\sampleinput1.txt"* with the actual location of the input file
