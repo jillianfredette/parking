@@ -5,7 +5,8 @@ public class Car {
     Ticket ticket;
 
     public Car(int l){
-        license = 1;
+        license = l;
+        System.out.println("Car "+this.license+" added");
     }
 
     public void getTicket(Ticket t){

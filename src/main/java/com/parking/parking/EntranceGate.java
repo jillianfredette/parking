@@ -22,10 +22,7 @@ public class EntranceGate extends Gate{
         //issue the car a ticket with the price for the lot, the car, and the lot
         Ticket ticket = new Ticket(lot.getPrice(), c, lot);
         c.getTicket(ticket);
-        System.out.println("Car "+c.license+" takes ticket");
-        //allow the car to enter the lot
-        lot.Enter();
-        System.out.println("Car "+c.license+" enters Lot "+lot.name);
+        System.out.println("Car "+c.license+" takes ticket with timestamp "+ticket.timestamp);
         return true;
     }
 

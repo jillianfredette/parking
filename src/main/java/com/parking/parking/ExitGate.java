@@ -4,6 +4,7 @@ public class ExitGate extends Gate {
 
     public ExitGate(ParkingLot l, int n){
         super(l, n);
+        //exit gate
         type = "Exit";
     }
 
@@ -13,10 +14,9 @@ public class ExitGate extends Gate {
             return false;
         }
         Ticket ticket = c.giveTicket();
+        System.out.println("Car "+c.license+" presents ticket with timestamp "+ticket.timestamp);
         lot.payTicket(ticket.price);
         System.out.println("Car "+c.license+" pays "+ticket.price+" cents");
-        lot.Exit();
-        System.out.println("Car "+c.license+" exits Lot "+lot.name);
         return true;
     }
 }
