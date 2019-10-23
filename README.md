@@ -1,5 +1,5 @@
 # parking
-assignment 3  for Software Design
+Assignment 4  for Software Design
 
 ## Project Classes
 This project has classes ParkingGroup, ParkingLot, Car, Ticket, Gate, EntranceGate, ExitGate
