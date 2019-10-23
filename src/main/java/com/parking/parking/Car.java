@@ -3,10 +3,10 @@ package com.parking.parking;
 import java.util.HashMap;
 
 public class Car {
-    int license;
+    String license;
     Ticket ticket;
 
-    public Car(int l){
+    public Car(String l){
         license = l;
         System.out.println("Car "+this.license+" added");
     }
@@ -24,7 +24,7 @@ public class Car {
     public void inquirePrice(ParkingGroup g){
         System.out.println("Car "+this.license+" inquires about price from Parking Group "+g.name);
         int price = g.inquirePrice();
-        System.out.println("Car "+this.license +"receives total price (price with discount) of "+price+" cents from Parking Group "+g.name);
+        System.out.println("Car "+this.license +" receives total price (price with discount) of "+price+" cents from Parking Group "+g.name);
     }
 
     public void inquireSpace(ParkingLot l){
@@ -44,7 +44,7 @@ public class Car {
 
         //find lot with lowest price and availability
         for(HashMap.Entry<String, ParkingLot> entry : lotsMap.entrySet()){
-            if(entry.getValue().inquireSpace() != 0){
+            if(entry.getValue().vacancy() != 0){
                 if(lot == null) lot = entry.getValue();
                 else{
                     if(entry.getValue().getPrice() < lot.getPrice()) lot = entry.getValue();
