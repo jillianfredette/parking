@@ -2,21 +2,16 @@ package com.parking.parking;
 
 public class EntranceGate extends Gate{
 
-    public EntranceGate(ParkingLot l, int n){
-        super(l, n);
+    public EntranceGate(ParkingLot l){
+        super(l);
         //entrance gate
-        type = "Entrance";
+        type = GateType.Entrance;
     }
 
     public boolean EnterLot(Car c){
         //can't enter the lot if it is full
         if(lot.occupancy == lot.capacity){
             System.out.println("Lot "+lot.name+" is at max capacity");
-            return false;
-        }
-        //can't enter the lot if the car is already in another lot
-        if(c.ticket != null) {
-            System.out.println("Car "+c.license+" is already in a lot");
             return false;
         }
         //issue the car a ticket with the price for the lot, the car, and the lot
