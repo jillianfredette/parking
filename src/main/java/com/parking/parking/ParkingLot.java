@@ -65,6 +65,10 @@ public class ParkingLot {
 
     public int inquireSpace(){
         System.out.println("Parking Lot "+this.name+" sends information about current availability");
+        return (vacancy());
+    }
+
+    public int vacancy(){
         return (capacity-occupancy);
     }
 
