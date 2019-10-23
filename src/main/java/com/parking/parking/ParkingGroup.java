@@ -24,7 +24,7 @@ public class ParkingGroup {
     }
 
     public int getPrice(){
-        return (price+((discount*price)/100));
+        return (price-((discount*price)/100));
     }
 
     public ParkingLot addLot(String n, int c){
