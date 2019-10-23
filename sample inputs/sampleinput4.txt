@@ -1,14 +1,21 @@
+Parking Groups
+GroupA 500 0
+GroupB 100 20
+
 Parking Lots
-A 100 50 1 1
-B 100 10 1 1
+LotA GroupA 1
+LotB GroupB 2
 
 Cars
-1
-2
+Car1
+Car2
+Car3
 
 Actions
-1 Enter A 1
-2 Enter A 1
-1 Enter B 1
-1 Exit A 2
-2 Exit A 2
+Car1 Inquire Price GroupB
+Car1 Inquire Space LotB
+Car1 Park
+Car2 Park
+Car3 Exit
+Car2 Exit
+Car1 Exit
